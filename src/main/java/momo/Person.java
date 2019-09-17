@@ -30,12 +30,12 @@ public class Person {
 
 
 
-        //int[] window = {1,3,6,9};
+       // int[] window = {1,3,6,9};
 
         //int total = 0;
 
-        // for(int x = 0; x < window.length; x++){
-        //total = total + window[x];
+        //for(int x = 0; x < window.length; x++){
+        //total=total+window[x];
         //System.out.println(total);
 
 
