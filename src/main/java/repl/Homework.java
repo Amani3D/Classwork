@@ -5,11 +5,6 @@ public class Homework {
 
         System.out.println(printOddNumbersInRange(15, 3));
 
-
-
-
-
-
                 }
     public static String printOddNumbersInRange(int start, int end){
         String result = "";

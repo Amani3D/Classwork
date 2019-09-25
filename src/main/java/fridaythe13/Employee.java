@@ -1,29 +1,46 @@
 package fridaythe13;
 
-public class Employee {
+import employee.Person;
+
+public class Employee extends Person {
+
     //properties, instance variables, fields
-    public String name;
-    public float hoursWorked;
-    public double hourlyRate;
+    private float hoursWorked;
+    private double hourlyRate;
+
+    public float getHoursWorked() {
+        return hoursWorked;
+    }
+
+    public void setHoursWorked(float hoursWorked) {
+        this.hoursWorked = hoursWorked;
+    }
+
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
 
     public Employee(String name, float hoursWorked, double hourlyRate) {
         //constructor
-        this.name = name;
+        super(name);
         this.hoursWorked = hoursWorked;
         this.hourlyRate = hourlyRate;
     }
     //Method or Function
     public void calculatePay(){
         System.out.println(hourlyRate * hoursWorked);
-
-
     }
+
+
 
     @Override
     public String toString() {
         return "Employee{" +
-                "name='" + name + '\'' +
-                ", hoursWorked=" + hoursWorked +
+                "hoursWorked=" + hoursWorked +
                 ", hourlyRate=" + hourlyRate +
                 '}';
     }
