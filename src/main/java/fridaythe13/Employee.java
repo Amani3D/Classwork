@@ -1,12 +1,9 @@
 package fridaythe13;
 
-import employee.Person;
-
-public class Employee extends Person {
+public abstract class Employee extends Person implements IPay {
 
     //properties, instance variables, fields
     private float hoursWorked;
-    private double hourlyRate;
 
     public float getHoursWorked() {
         return hoursWorked;
@@ -16,32 +13,23 @@ public class Employee extends Person {
         this.hoursWorked = hoursWorked;
     }
 
-    public double getHourlyRate() {
-        return hourlyRate;
-    }
-
-    public void setHourlyRate(double hourlyRate) {
-        this.hourlyRate = hourlyRate;
-    }
-
-    public Employee(String name, float hoursWorked, double hourlyRate) {
+    public Employee(String name, float hoursWorked) {
         //constructor
         super(name);
         this.hoursWorked = hoursWorked;
-        this.hourlyRate = hourlyRate;
+
     }
+    //Abstract Method or Function
+    public abstract void calculatePay();
+
     //Method or Function
-    public void calculatePay(){
-        System.out.println(hourlyRate * hoursWorked);
+    public void printYearlyHours() {
+        System.out.println(hoursWorked * 52);
     }
-
-
 
     @Override
     public String toString() {
-        return "Employee{" +
-                "hoursWorked=" + hoursWorked +
-                ", hourlyRate=" + hourlyRate +
-                '}';
+        return "Employee name is : " + getName();
     }
+
 }
